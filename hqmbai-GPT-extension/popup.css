@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  background: #111214;
+  color: #f5f7fa;
+  font: 13px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.app {
+  width: 400px;
+  min-height: 580px;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.header p {
+  margin: 4px 0 0;
+  color: #8fa2b7;
+}
+
+.panel {
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: #181a1f;
+}
+
+.panel h2 {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.toggle:last-child {
+  margin-bottom: 0;
+}
+
+.toggle input {
+  width: 16px;
+  height: 16px;
+  accent-color: #13b981;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.meta:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  color: #98a4b3;
+  font-weight: 700;
+}
+
+.value,
+.paths,
+.tip,
+.logs {
+  color: #f5f7fa;
+  word-break: break-word;
+}
+
+.link {
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.paths {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 8px;
+  color: #d0d8e3;
+}
+
+.tip {
+  margin: 0;
+  color: #92a0b2;
+  font-size: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+button {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: #23262d;
+  color: #fff;
+  padding: 10px 12px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+button:hover {
+  background: #2b3039;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.primary-btn {
+  background: #13b981;
+  color: #05120d;
+  border-color: rgba(19, 185, 129, 0.3);
+}
+
+.primary-btn:hover {
+  background: #24c692;
+}
+
+.logs {
+  display: grid;
+  gap: 8px;
+}
+
+.log-item {
+  padding: 8px 9px;
+  border-radius: 8px;
+  background: #20242c;
+}
+
+.log-time {
+  display: block;
+  margin-bottom: 4px;
+  color: #8fa2b7;
+  font-size: 12px;
+}

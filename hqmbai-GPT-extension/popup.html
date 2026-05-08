@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>好奇漫步GPT网页实时备份器</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <h1>好奇漫步GPT网页实时备份器</h1>
+        <p>v2.6</p>
+      </div>
+      <button id="pick-folder" class="primary-btn">选择保存目录</button>
+    </header>
+
+    <section class="panel">
+      <h2>联系方式</h2>
+      <div class="meta">
+        <span class="label">QQ</span>
+        <span class="value">3789299667</span>
+      </div>
+      <div class="meta">
+        <span class="label">更新页</span>
+        <span class="value">
+          <a class="link" href="https://dcnhigwbreiu.feishu.cn/wiki/VdXfwnaCViCYumkNb7oc4ZbxnKd" target="_blank" rel="noreferrer">打开飞书页面</a>
+        </span>
+      </div>
+      <div class="meta">
+        <span class="label">GitHub</span>
+        <span class="value">
+          <a class="link" href="https://github.com/JogCurious/hqmbai-gpt-extension" target="_blank" rel="noreferrer">打开 GitHub 仓库</a>
+        </span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>保存目录</h2>
+      <div class="meta">
+        <span class="label">当前目录</span>
+        <span class="value" id="folder-name">尚未选择</span>
+      </div>
+      <div class="paths" id="folder-paths">
+        <div>当前网页 /</div>
+        <div>历史网页 /</div>
+        <div>当前Markdown /</div>
+        <div>历史Markdown /</div>
+        <div>导出 /</div>
+      </div>
+      <p class="tip">第一次选择后会记住目录；若浏览器回收权限，需要重新选择一次。</p>
+    </section>
+
+    <section class="panel">
+      <h2>功能开关</h2>
+      <label class="toggle">
+        <input type="checkbox" id="global-enabled" />
+        <span>扩展总开关</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="auto-enabled" />
+        <span>原生 MHTML 自动保存</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="notice-enabled" />
+        <span>顶部临时聊天提醒</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="privacy-enabled" />
+        <span>非临时聊天隐私提醒</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="remember-position-enabled" />
+        <span>记住上次提醒框位置</span>
+      </label>
+    </section>
+
+    <section class="panel">
+      <h2>当前状态</h2>
+      <div class="meta">
+        <span class="label">当前对话</span>
+        <span class="value" id="current-conversation">检测中</span>
+      </div>
+      <div class="meta">
+        <span class="label">网页文件</span>
+        <span class="value" id="current-file">未生成</span>
+      </div>
+      <div class="meta">
+        <span class="label">MD 文件</span>
+        <span class="value" id="current-md-file">未生成</span>
+      </div>
+      <div class="meta">
+        <span class="label">保存模式</span>
+        <span class="value" id="current-mode">检测中</span>
+      </div>
+      <div class="meta">
+        <span class="label">最近结果</span>
+        <span class="value" id="current-status">准备中</span>
+      </div>
+    </section>
+
+    <section class="grid">
+      <button id="save-now">保存网页</button>
+      <button id="archive-now">归档网页</button>
+      <button id="pause-tab">暂停自动</button>
+      <button id="manual-split">手动切分</button>
+      <button id="rename-session">重命名</button>
+      <button id="export-md">导出 MD</button>
+      <button id="export-json">导出 JSON</button>
+      <button id="copy-location">复制保存位置说明</button>
+    </section>
+
+    <section class="panel">
+      <h2>最近日志</h2>
+      <div id="logs" class="logs">暂时还没有日志。</div>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
